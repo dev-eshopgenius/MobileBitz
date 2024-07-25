@@ -1,0 +1,412 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iphone_repairs_Banner.png",
+            "heading": "Same Day Repair Available",
+            "heading_size": "h1",
+            "subheading": "Don't let a damaged phone slow youdown.",
+            "button_label": "Book A Repair",
+            "link": "https:\/\/mobilebitz.co.uk\/categories",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 10,
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "left"
+          }
+        },
+        "slide_nTw3iD": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mobile-phone-blank-screen.jpg",
+            "heading": "Refurbished Phones",
+            "heading_size": "h1",
+            "subheading": "A Graded Quality - Factory Unlocked - New\/Used Stock Availability",
+            "button_label": "Shop",
+            "link": "shopify:\/\/collections\/refurbished-iphone",
+            "button_style_secondary": false,
+            "box_align": "middle-right",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_eaQtq7": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/young-people-holding-smart-phones.jpg",
+            "heading": "Accessories",
+            "heading_size": "h1",
+            "subheading": "Shop our latest range of accessories",
+            "button_label": "Shop",
+            "link": "shopify:\/\/collections",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-2",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide-0",
+        "slide_nTw3iD",
+        "slide_eaQtq7"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "featured-collection-0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Meet Our Favourite Choices",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "iphone-cases",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "multicolumn_gyNx6H": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_iPNgkF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brand_Apple.webp",
+            "title": "Shop By Brand",
+            "text": "<p>Shop our best Apple iPhone range of cases<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7njWrM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brand_Galaxy_S.webp",
+            "title": "Shop By Brand",
+            "text": "<p>Shop our best Samsung Galaxy range of cases<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6bcPiR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brand_Google.webp",
+            "title": "Shop By Brand",
+            "text": "<p>Shop our best Google range of cases<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_8NgEYr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/huawei_4N27LPJLr.webp",
+            "title": "Shop By Brand",
+            "text": "<p>Shop our best Huawei range of cases<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_iPNgkF",
+        "column_7njWrM",
+        "column_6bcPiR",
+        "column_8NgEYr"
+      ],
+      "settings": {
+        "title": "Brand Selection",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_E8njV4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_XKGNjd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have POWER on the GO!",
+            "heading_size": "h1"
+          }
+        },
+        "text_FPzQXU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shop Our Power Bank Range, giving you the extra charge you need for your day!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_dQiE8g": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop",
+            "button_link": "shopify:\/\/collections\/power-banks",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XKGNjd",
+        "text_FPzQXU",
+        "button_dQiE8g"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Power_Bank_DT861-500x500.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_WhTcrY": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_r6YKCa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Refurbished Phones",
+            "heading_size": "h1"
+          }
+        },
+        "text_dW7XAA": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>A Graded Quality<\/li><li>Factory Unlocked<\/li><li>New\/Used Stock Availability<\/li><\/ul>",
+            "text_style": "body"
+          }
+        },
+        "button_bFWMyG": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop",
+            "button_link": "shopify:\/\/collections\/refurbished-iphone",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_r6YKCa",
+        "text_dW7XAA",
+        "button_bFWMyG"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/iPhone.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_qWTUc8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fCzPfR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Watch out for our straps!",
+            "heading_size": "h2"
+          }
+        },
+        "text_7QjhJr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover our stylish collection of watch straps and elevate your timepiece to a new level of sophistication. Shop our wide range of designs, crafted with premium materials to suit every style and occasion. Transform your watch with our elegant and versatile straps today!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_VBrff9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fCzPfR",
+        "text_7QjhJr",
+        "button_VBrff9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Brown_and_White_Simple_Phone_Case_Premium_3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_kfNXdC": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SALE",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-arrivals",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_NQckLq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_F7txLf": {
+          "type": "heading",
+          "settings": {
+            "heading": "WHY CHOOSE MOBILEBITZ",
+            "heading_size": "h2"
+          }
+        },
+        "text_Tz3KVn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Choose us for all your mobile phone accessory and repair needs. We offer a wide range of high-quality accessories to enhance your device, from stylish cases to durable screen protectors. Our expert repair services come with a quick turnaround time and a satisfaction guarantee. With 65 convenient branch locations, exceptional customer service, and competitive pricing, we are your trusted partner for keeping your mobile phone in top condition.<\/p>"
+          }
+        },
+        "button_66eAiP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Find Us",
+            "button_link": "shopify:\/\/pages\/locations",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_F7txLf",
+        "text_Tz3KVn",
+        "button_66eAiP"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_blog_mK74BT": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog News",
+        "heading_size": "h1",
+        "blog": "mobile-phone-repairs",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured-collection-0",
+    "multicolumn_gyNx6H",
+    "image_with_text_E8njV4",
+    "image_with_text_WhTcrY",
+    "image_with_text_qWTUc8",
+    "featured_collection_kfNXdC",
+    "rich_text_NQckLq",
+    "featured_blog_mK74BT"
+  ]
+}
