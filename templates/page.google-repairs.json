@@ -2,21 +2,23 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 28
       }
     },
-    "customizer_banner_P8E78P": {
+    "customizer_banner_AwtLJ7": {
       "type": "customizer-banner",
       "settings": {
-        "classname": "cust-banner-design1",
-        "bg_clr": "",
-        "banner_img": "shopify:\/\/shop_images\/huawei_4N27LPJLr.webp",
-        "heading": "Huawei Repairs",
-        "subheading": "Huawei Authorised Service Provider",
+        "classname": "cust-banner-design3",
+        "bg_clr": "#edf5ff",
+        "banner_img": "shopify:\/\/shop_images\/google-phone.jpg",
+        "heading": "Google Pixel Repairs",
+        "subheading": "Google Authorised Service Provider",
         "btn_label": "Select Your Device",
         "btn_url": "#customizer-collection-wrapp",
+        "icon": "shopify:\/\/shop_images\/GoogleG.webp",
         "text1": "",
         "text2": "",
         "text3": "",
@@ -25,62 +27,62 @@
         "padding_bottom": 36
       }
     },
-    "customizer_image_with_text_BMKfYb": {
+    "customizer_image_with_text_T4Ee7x": {
       "type": "customizer-image-with-text",
       "blocks": {
-        "add_content_pBaD99": {
+        "add_content_UMp7Pn": {
           "type": "add_content",
           "settings": {
             "heading": "Expertly Trained Technicians",
             "content": "At iSmash, we're dedicated in delivering professional high-quality repairs along with an express turnaround, so you are not left long without your precious device. You can rest assured that our technicians are fully qualified and undergo extensive training to ensure your Google Pixel leaves any of our 26 stores looking as good as new."
           }
         },
-        "add_content_FqCq7g": {
+        "add_content_xAyCT9": {
           "type": "add_content",
           "settings": {
             "heading": "Manufacture Accredited Genuine Parts",
-            "content": "As a Google Authorised Service Provider, we provide an express repair service for all Pixel smartphones. All the parts we use are genuine, sourced directly from Google and are backed by the iSmash lifetime warranty. This enables us to guarantee that your device will be repaired to the highest standard, giving your device the feeling that it has come straight out of the original packaging! If you are in need of a Google Pixel repair, whether it is a screen repair or a battery replacement, contact us today and let us help you get your mobile, mobile again."
+            "content": "As a Google Authorised Service Provider, we provide an express repair service for all Pixel smartphones. All the parts we use are genuine, sourced directly from Google and are backed by the iSmash lifetime warranty. This enables us to guarantee that your device will be repaired to the highest standard, giving your device the feeling that it has come straight out of the original packaging!\n\nIf you are in need of a Google Pixel repair, whether it is a screen repair or a battery replacement, contact us today and let us help you get your mobile, mobile again."
           }
         }
       },
       "block_order": [
-        "add_content_pBaD99",
-        "add_content_FqCq7g"
+        "add_content_UMp7Pn",
+        "add_content_xAyCT9"
       ],
       "settings": {
         "classname": "cust-iwt-design1",
         "bg_clr": "",
-        "secheading": "Made by Huawei, fixed by us.",
-        "banner_img": "shopify:\/\/shop_images\/google-tech-3f.jpg"
+        "secheading": "Made by Google, fixed by us.",
+        "banner_img": "shopify:\/\/shop_images\/google-tech-3f.webp"
       }
     },
-    "customizer_featured_collection_7EL44p": {
+    "customizer_collection_section_dYwTKm": {
       "type": "customizer-featured-collection",
       "blocks": {
-        "add_collection_6WnWGD": {
+        "add_collection_ERCyAb": {
           "type": "add_collection",
           "settings": {
             "blockbg_clr": "",
-            "slider_enable": false,
+            "slider_enable": true,
             "coll_name": "",
             "btnlabel": "",
-            "collection": "huawei"
+            "collection": "google-smartphones"
           }
         }
       },
       "block_order": [
-        "add_collection_6WnWGD"
+        "add_collection_ERCyAb"
       ],
       "settings": {
         "classname": "cust-collection-design1",
         "bg_clr": "",
-        "secheading": "Select Your Huawei Smartphones"
+        "secheading": "Select your Google smartphone"
       }
     },
-    "customizer_icon_text_6FycJP": {
+    "customizer_icon_text_XQMnNH": {
       "type": "customizer-icon-text",
       "blocks": {
-        "icon_text_MfcCAg": {
+        "icon_text_93R3Ln": {
           "type": "icon_text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/1.png",
@@ -89,7 +91,7 @@
             "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
           }
         },
-        "icon_text_FrDMmk": {
+        "icon_text_H4GRKi": {
           "type": "icon_text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/2_2.png",
@@ -98,7 +100,7 @@
             "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
           }
         },
-        "icon_text_R9wtVe": {
+        "icon_text_NttrTr": {
           "type": "icon_text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/3_1.png",
@@ -107,7 +109,7 @@
             "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
           }
         },
-        "icon_text_JffeeA": {
+        "icon_text_9EGXED": {
           "type": "icon_text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/4_1.png",
@@ -116,7 +118,7 @@
             "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
           }
         },
-        "icon_text_A78AW6": {
+        "icon_text_C9YHBb": {
           "type": "icon_text",
           "settings": {
             "icon": "shopify:\/\/shop_images\/5_1.png",
@@ -127,24 +129,24 @@
         }
       },
       "block_order": [
-        "icon_text_MfcCAg",
-        "icon_text_FrDMmk",
-        "icon_text_R9wtVe",
-        "icon_text_JffeeA",
-        "icon_text_A78AW6"
+        "icon_text_93R3Ln",
+        "icon_text_H4GRKi",
+        "icon_text_NttrTr",
+        "icon_text_9EGXED",
+        "icon_text_C9YHBb"
       ],
       "settings": {
         "classname": "custom-icon-text",
-        "bg_clr": "",
+        "bg_clr": "#ffffff",
         "secheading": "Five Reasons to Choose Mobilebitz"
       }
     }
   },
   "order": [
     "main",
-    "customizer_banner_P8E78P",
-    "customizer_image_with_text_BMKfYb",
-    "customizer_featured_collection_7EL44p",
-    "customizer_icon_text_6FycJP"
+    "customizer_banner_AwtLJ7",
+    "customizer_image_with_text_T4Ee7x",
+    "customizer_collection_section_dYwTKm",
+    "customizer_icon_text_XQMnNH"
   ]
 }

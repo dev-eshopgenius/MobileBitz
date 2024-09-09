@@ -1,0 +1,156 @@
+<!-- START:-  visit us popup -->
+<div class="visitUs-popup-wrapper">
+  <div class="popup-content-wrapper page-width">
+    {% render 'customizer-popup-stepbar' %}
+
+    <div class="repair-content-wrapper repair--delivery-method-wrapp">
+      <div class="visit-method--wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'visit_us_popup' %}
+            <div class="visit_us_popup">
+              <div class="blocktitle">
+                {{ block.settings.blocktitle }}
+              </div>
+
+              <div class="repair--tabs">
+                {% if block.settings.visit_title != blank or block.settings.subtitle != blank %}
+                  <div class="choose-services choose-visit-services">
+                    {% if block.settings.visit_title != blank %}
+                      <div class="heading-wrap visit_title">
+                        <span>{% render 'icon-direction' %}</span>
+                        {{ block.settings.visit_title }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.subtitle != blank %}
+                      <div class="content">
+                        {{ block.settings.subtitle }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.mail_title != blank or block.settings.mail_subtitle != blank %}
+                  <div class="choose-services choose-mail-services">
+                    {% if block.settings.mail_title != blank %}
+                      <div class="heading-wrap mail_title">
+                        <span>{% render 'icon-mail' %}</span>
+                        {{ block.settings.mail_title }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.mail_subtitle != blank %}
+                      <div class="content">
+                        {{ block.settings.mail_subtitle }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+              <div class="email-wrapper" style="display:none;">
+                {% if block.settings.email_title != blank %}
+                  <div class="email_title">
+                    {{ block.settings.email_title }}
+                  </div>
+                {% endif %}
+                {% if block.settings.btn_label %}
+                  <input required type="email" class="customer-email-id" name="email" placeholder="Email" autocomplete="true">
+
+                  <div class="button btn_label">
+                    <a href="{{ block.settings.btn_url }}">
+                      {{ block.settings.btn_label }}
+                    </a>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="delivery-method-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'mailin_popup' %}
+            {% if block.settings.title != blank or block.settings.content != blank %}
+              <div class="block-heading-wrapp">
+                {% if block.settings.title != blank %}
+                  <div class="blocktitle">
+                    {{ block.settings.title }}
+                  </div>
+                {% endif %}
+                {% if block.settings.content != blank %}
+                  <div class="content">
+                    {{ block.settings.content }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+            <div class="deliery-booking-tab">
+              <div class="repair--tab-content">
+                <div class="booking-panel mail-in-process">
+                  <div class="proc_title">
+                    {{ block.settings.proc_title }}
+                  </div>
+                  {% for i in (1..3) %}
+                    {% capture proc_img %}proc_img{{ i }}{% endcapture %}
+                    {% capture proc_content %}proc_content{{ i }}{% endcapture %}
+                    {% if block.settings[proc_img] != blank or block.settings[proc_content] != blank %}
+                      <div class="content-wrapper">
+                        {% if block.settings[proc_img] != blank %}
+                          <div class="image">
+                            {{
+                              block.settings[proc_img]
+                              | image_url: width: block.settings[proc_img].width
+                              | image_tag: loading: 'lazy'
+                            }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings[proc_content] != blank %}
+                          <div class="content">
+                            {{ block.settings[proc_content] }}
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                {% if block.settings.time_title != blank or block.settings.time_content != blank %}
+                  <div class="booking-panel mail-in-time">
+                    {% if block.settings.time_title != blank %}
+                      <div class="title">
+                        {{ block.settings.time_title }}
+                      </div>
+                    {% endif %}
+                    {% if block.settings.time_content != blank %}
+                      <div class="content">
+                        {{ block.settings.time_content }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if settings.mailproduct != blank %}
+                <div id="product-data"  class="mail-product-details"
+                    data-id="{{ all_products[settings.mailproduct].selected_or_first_available_variant.id }}"
+                     data-title="{{ all_products[settings.mailproduct].title }}" 
+                     data-image="{{ all_products[settings.mailproduct].featured_image | img_url: 'original' }}" 
+                     data-description="{{ all_products[settings.mailproduct].description }}" 
+                     data-price="{{ all_products[settings.mailproduct].price | money_without_currency }}">
+                    
+                </div>
+                 {% endif %}
+                {% if block.settings.btn_label != blank %}
+                  <div class="button mail-continue-button">
+                    {{ block.settings.btn_label }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+       <div class="form-wrapper">
+        {% render 'customizer-form' %}
+      </div>
+       {% render 'store-locator-map' %}
+    </div>
+  </div>
+</div>
+<!-- END:- visit us popup -->

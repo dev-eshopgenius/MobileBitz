@@ -118,6 +118,9 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "mailproduct": "mail-product",
+    "agreecontent": "<p>To provide further peace of mind, from time to time we like to send our loyal customers special offers, promotions & useful advice.<\/p>",
+    "termcontent": "<p>I agree to the <a href=\"\/policies\/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms & Conditions<\/a>. *<\/p>",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -141,7 +144,7 @@
           "background": "#eff0f5",
           "background_gradient": "",
           "text": "#0e1b4d",
-          "button": "#4770db",
+          "button": "#0e1b4d",
           "button_label": "#eff0f5",
           "secondary_button_label": "#0e1b4d",
           "shadow": "#0e1b4d"

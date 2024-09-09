@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "make_appointment_3EwdkW": {
+      "type": "make-appointment",
+      "blocks": {
+        "first_level_DpbXGB": {
+          "type": "first_level",
+          "settings": {
+            "image1": "shopify:\/\/shop_images\/iPhone_12_G-iShock_Hologram_Maze_Pink.png",
+            "text1": "Apple",
+            "triggerlink1": "",
+            "image2": "shopify:\/\/shop_images\/iPhone_12_G-iShock_Hologram_Maze_Orange.png",
+            "text2": "Samsung",
+            "triggerlink2": "shopify:\/\/pages\/samsung-repairs",
+            "image3": "shopify:\/\/shop_images\/iPhone_12_Graffiti_Hoddie_Bear.png",
+            "text3": "Google",
+            "triggerlink3": "shopify:\/\/pages\/google-repairs",
+            "text4": "",
+            "triggerlink4": "",
+            "text5": "",
+            "triggerlink5": "",
+            "text6": "",
+            "triggerlink6": "",
+            "text7": "",
+            "triggerlink7": "",
+            "text8": "",
+            "triggerlink8": "",
+            "text9": "",
+            "triggerlink9": "",
+            "text10": "",
+            "triggerlink10": ""
+          }
+        },
+        "second_level_47LDMg": {
+          "type": "second_level",
+          "settings": {
+            "manufactext1": "Screen",
+            "manufactext2": "Camera",
+            "manufactext3": "Battery\/Charger",
+            "manufactext4": "Back Cover",
+            "manufactext5": "Water Damage",
+            "manufactext6": "I'm not sure",
+            "manufactext7": "",
+            "manufactext8": "",
+            "manufactext9": "",
+            "manufactext10": ""
+          }
+        },
+        "third_level_WwmgNh": {
+          "type": "third_level",
+          "settings": {
+            "image1": "shopify:\/\/shop_images\/phone-1688045934667.jpg",
+            "text1": "iPhone",
+            "triggerlink1": "shopify:\/\/pages\/iphone-repairs",
+            "image2": "shopify:\/\/shop_images\/tablet-1688045948553.jpg",
+            "text2": "iPad",
+            "triggerlink2": "shopify:\/\/pages\/ipad-repairs",
+            "image3": "shopify:\/\/shop_images\/laptop-1688045961194.jpg",
+            "text3": "MacBook",
+            "triggerlink3": "shopify:\/\/pages\/macbook-repairs",
+            "text4": "",
+            "triggerlink4": "",
+            "text5": ""
+          }
+        }
+      },
+      "block_order": [
+        "first_level_DpbXGB",
+        "second_level_47LDMg",
+        "third_level_WwmgNh"
+      ],
+      "settings": {
+        "classname": "",
+        "firstheading": "<h4>Hi there,<\/h4><h3>Let's get you a quote for your repair. This will take less than 60 seconds...<\/h3>",
+        "subheading": "First, tell us who made your device?",
+        "secheading": "What is wrong with your device?",
+        "sec_subheading": "Select multiple options if more than one applies.",
+        "nextlabel": "Next",
+        "backlabel": "Back"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "make_appointment_3EwdkW"
+  ]
+}

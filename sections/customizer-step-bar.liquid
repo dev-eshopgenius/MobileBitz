@@ -1,0 +1,47 @@
+<div class="customizer-step-bar-wrapper">
+  <div class="step-bar-wrapper page-width">
+    {% for block in section.blocks %}
+      {% if block.type == 'step_bar' %}
+        {% if block.settings.stepbar != blank or block.settings.mob_stepbar != blank %}
+          <div class="customizer-step-bar {% if forloop.index == 2 %}selected{% endif %}">
+            <div class="content">
+              <div class="desktop-text">{{ block.settings.stepbar }}</div>
+              <div class="mobile-text">{{ block.settings.mob_stepbar }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Customizer Step Bar",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "step_bar",
+      "name":"Step Bar",
+      "settings": [
+        {
+          "type": "text",
+          "id":"stepbar",
+          "label": "Step Bar",
+          "default": "1 Select Device"
+        },
+         {
+          "type": "text",
+          "id":"mob_stepbar",
+          "label": "Mobile Step Bar",
+          "default": "1 Device"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Customizer StepBar",
+
+  }]
+}
+{% endschema %}

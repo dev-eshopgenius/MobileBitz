@@ -1,0 +1,217 @@
+{%- liquid
+  assign contact_form_class = 'isolate'
+  if settings.animations_reveal_on_scroll
+    assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+  endif
+-%}
+<div class="form-main-wrapper">
+  {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+    <div class="form-all-wrapper">
+      <div class="form-section-wrapp">
+        {%- if form.posted_successfully? -%}
+          <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+            {% render 'icon-success' %}
+            {{ 'templates.contact.form.post_success' | t }}
+          </h2>
+        {%- elsif form.errors -%}
+          <div class="form__message">
+            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+              {% render 'icon-error' %}
+              {{ 'templates.contact.form.error_heading' | t }}
+            </h2>
+          </div>
+          <ul class="form-status-list caption-large" role="list">
+            <li>
+              <a href="#ContactForm-email" class="link">
+                {{ form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email }}
+              </a>
+            </li>
+          </ul>
+        {%- endif -%}
+        <div class="contact__fields">
+          <div class="form-group">
+            <div class="field">
+              <input
+                class="field__input"
+                autocomplete="name"
+                type="text"
+                aria-required="true"
+                id="ContactForm-name"
+                name="contact[First_Name]"
+                value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                placeholder="First Name*"
+              >
+              <label class="field__label" for="ContactForm-name">First Name</label>
+            </div>
+            <div class="field ">
+              <input
+                class="field__input"
+                autocomplete="name"
+                type="text"
+                id="ContactForm-name"
+                aria-required="true"
+                name="contact[Last_Name]"
+                value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                placeholder="Last Name*"
+              >
+              <label class="field__label" for="ContactForm-name">Last Name</label>
+            </div>
+          </div>
+          <div class="field field--with-error">
+            <input
+              autocomplete="email"
+              type="email"
+              id="ContactForm-email"
+              class="field__input"
+              name="contact[email]"
+              spellcheck="false"
+              autocapitalize="off"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              aria-required="true"
+              {% if form.errors contains 'email' %}
+                aria-invalid="true"
+                aria-describedby="ContactForm-email-error"
+              {% endif %}
+              placeholder="{{ 'templates.contact.form.email' | t }}"
+            >
+            <label class="field__label" for="ContactForm-email">
+              {{- 'templates.contact.form.email' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+            {%- if form.errors contains 'email' -%}
+              <small class="contact__field-error" id="ContactForm-email-error">
+                <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                <span class="form__message">
+                  {%- render 'icon-error' -%}
+                  {{- form.errors.translated_fields.email | capitalize }}
+                  {{ form.errors.messages.email -}}
+                </span>
+              </small>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <input
+              type="tel"
+              id="ContactForm-phone"
+              class="field__input"
+              autocomplete="tel"
+              name="contact[{{ 'templates.contact.form.phone' | t }}]"
+              pattern="[0-9\-]*"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              placeholder="{{ 'templates.contact.form.phone' | t }}"
+            >
+            <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              id="ContactForm-postcode"
+              class="field__input"
+              autocomplete="off"
+              name="contact[postcode]"
+              value="{% if form.postcode %}{{ form.postcode }}{% elsif customer %}{{ customer.postcode }}{% endif %}"
+              placeholder="Postcode"
+            >
+            <label class="field__label" for="ContactForm-phone">Postcode</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <input
+              type="text"
+              id="ContactForm-postcode"
+              class="field__input"
+              autocomplete="off"
+              name="contact[device_passcode]"
+              value="{% if form.passcode %}{{ form.passcode }}{% elsif customer %}{{ customer.passcode }}{% endif %}"
+              placeholder="Device Passcode*"
+            >
+            <label class="field__label" for="ContactForm-phone">Device Passcode</label>
+          </div>
+          <div class="field">
+            <select name="mobile-network field">
+              <option>Mobile Network</option>
+              <option value="vodafone">Vodafone</option>
+              <option value="ot">OT</option>
+              <option value="three">Three</option>
+              <option value="sky-mobile">Sky Mobile</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="form__label field__label" for="ContactForm-body">
+            Any additional information? (Optional)
+          </label>
+          <textarea
+            rows="10"
+            id="ContactForm-body"
+            class="text-area field__input"
+            name="contact[{{ 'templates.contact.form.comment' | t }}]"
+            placeholder="{{ 'templates.contact.form.comment' | t }}"
+          >
+          {{- form.body -}}
+        </textarea>
+        </div>
+      </div>
+      <div class="content-section-wrapp">
+        <div class="repair-details-wrapp">
+          <h2>Repair Details</h2>
+          <div class="repair-type-wrapp">
+            <div class="repair-type-content">
+              <div class="product-title-wrapp">
+                <h3>{{ settings.repairtype }}</h3>
+                <div class="product-title"></div>
+              </div>
+              <div class="product-price-wrapp">
+                <h3>{{ settings.repairprice }}</h3>
+                <div class="repair-product-price"></div>
+              </div>
+            </div>
+            <div class="repair-type-image">
+              <img src="" height="auto" width="auto">
+            </div>
+          </div>
+          <div class="additional-product-wrapp">
+            <div class="additional-product-content">
+              <div class="product-title-wrapp">
+                <h3>{{ settings.mailtype }}</h3>
+                <div class="mail-product-description"></div>
+              </div>
+              <div class="product-price-wrapp">
+                <h3>{{ settings.repairprice }}</h3>
+                <div class="mail-product-price"></div>
+              </div>
+            </div>
+            <div class="mail-type-image">
+              <img src="" class="mail_image">
+            </div>
+          </div>
+          <div class="total-price-wrap">
+            Total Cost:
+            <div class="total--price"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="agree-content-wrap">
+      <label for="emailmarketingno" class="condition_chek">
+        <input type="checkbox" name="emailmarketing" class="agreecontent checkbox_input" id="emailmarketingno">
+        {{ settings.agreecontent }}
+      </label>
+      <label for="customer_terms" class="condition_chek">
+        <input type="checkbox"  name="customerterms" class="termcontent checkbox_input" id="customer_terms">{{ settings.termcontent }}
+      </label>
+      <div class="error-msg" style="display:none;">
+        {{ settings.error_msg }}
+      </div>
+    </div>
+    <div class="contact__button js-add-product">
+      <div class="add-product-fields" additional-product-id="{{ all_products[settings.mailproduct].selected_or_first_available_variant.id }}">
+      </div>
+      <div type="button" class="button btn js-appoint-button">Confirm Appointment</div>
+    </div>
+  {%- endform -%}
+</div>

@@ -11,7 +11,7 @@
             "heading_size": "h1",
             "subheading": "Don't let a damaged phone slow youdown.",
             "button_label": "Book A Repair",
-            "link": "https:\/\/mobilebitz.co.uk\/categories",
+            "link": "shopify:\/\/pages\/make-appointment",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,

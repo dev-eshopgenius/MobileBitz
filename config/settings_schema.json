@@ -1465,5 +1465,75 @@
         "default": "scheme-1"
       }
     ]
+  },
+   {
+    "name": "Extra",
+    "settings": [
+      {
+        "type": "text",
+        "id": "repairtype",
+        "label": "Repair Title",
+        "default":"Repair Type:"
+      },
+      {
+        "type": "text",
+        "id": "repairprice",
+        "label": "Repair Price Title",
+        "default":"Repair Price:"
+      },
+      {
+        "type": "product",
+        "id": "mailproduct",
+        "label": "Customizer Mail Product"
+      },
+      {
+        "type": "text",
+        "id": "mailtype",
+        "label": "Mail-in Title",
+        "default":"Mail-in Pack:"
+      },
+      {
+        "type": "text",
+        "id": "mailprice",
+        "label": "Mail Price Title",
+        "default":"Cost:"
+      },
+     {
+        "type": "richtext",
+        "id": "agreecontent",
+        "label": "AgreeContent"
+      },
+      {
+        "type": "richtext",
+        "id": "termcontent",
+        "label": "TermsContent"
+      },
+      {
+        "type": "text",
+        "id": "error_msg",
+        "label": "Error Message",
+        "default":"Please read and accept the terms and conditions"
+      },
+      {
+        "type": "header",
+        "content": "Store Locator"
+      },
+        {
+            "type": "text",
+            "id": "name",
+            "label": "Store Name"
+          },
+          {
+            "type": "text",
+            "id": "lat",
+            "label": "Latitude"
+          },
+          {
+            "type": "text",
+            "id": "lng",
+            "label": "Longitude"
+          }
+        
+    ]
   }
 ]

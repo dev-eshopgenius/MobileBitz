@@ -1,0 +1,106 @@
+<div
+  class="customizer-icon-with-text-section {{ section.settings.classname }}"
+  style="background:{{ section.settings.bg_clr }}"
+>
+  <div class="customizer-icon-text-wrapper page-width">
+    {% if section.settings.secheading != blank %}
+      <div class="secheading">
+        <h2>{{ section.settings.secheading }}</h2>
+      </div>
+    {% endif %}
+    <div class="icon-with-text-content">
+      {% for block in section.blocks %}
+        {% if block.type == 'icon_text' %}
+          <div class="block-content">
+            {% if block.settings.icon != blank %}
+              <div class="icon-wrap">
+                {{ block.settings.icon | image_url: width: 100 | image_tag: loading: 'lazy', class: 'icon' }}
+              </div>
+            {% endif %}
+            {% if block.settings.heading != blank %}
+              <div class="heading">
+                {{ block.settings.heading }}
+              </div>
+            {% endif %}
+            {% if block.settings.toolheading != blank or block.settings.toolcontent != blank %}
+              <div class="tooltip-content-wrap">
+                {% if block.settings.toolheading != blank %}
+                  <div class="toolheading">
+                    {{ block.settings.toolheading }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+                      <path d="M25,2C12.297,2,2,12.297,2,25s10.297,23,23,23s23-10.297,23-23S37.703,2,25,2z M25,11c1.657,0,3,1.343,3,3s-1.343,3-3,3 s-3-1.343-3-3S23.343,11,25,11z M29,38h-2h-4h-2v-2h2V23h-2v-2h2h4v2v13h2V38z"/>
+                    </svg>
+                    {% if block.settings.toolcontent != blank %}
+                      <div class="toolcontent">
+                        {{ block.settings.toolcontent }}
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Customizer Icon Text",
+  "settings": [
+     {
+    "type": "text",
+    "id": "classname",
+    "label": "Unique ClassName",
+  },
+      {
+      "type": "color",
+      "id": "bg_clr",
+      "label": "Background Color"
+    },
+    {
+    "type": "text",
+    "id": "secheading",
+    "label": "Section Heading",
+  }
+  ],
+  "blocks": [
+    {
+      "type": "icon_text",
+      "name":"Icon Text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+        },
+        {
+          "type": "header",
+          "content": "Tooltip Content"
+        },
+        {
+          "type": "text",
+          "id": "toolheading",
+          "label": "Tooltip Text",
+        },
+        {
+          "type": "text",
+          "id": "toolcontent",
+          "label": "Tooltip Content",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Customizer Icon Text"
+    }
+  ]
+}
+{% endschema %}

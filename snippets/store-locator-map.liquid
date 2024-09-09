@@ -1,0 +1,33 @@
+<div class="store-locator-wrapper" style="display:none;">
+
+<div class="locator-search-wrapper">
+  <h2>Find a Service Centre</h2>
+<form id="location-form">
+   <label for="address" style="display:none">Enter Address or Pincode:</label>
+   <input type="text" id="pincode" name="address" required autocomplete="off">
+   <button type="submit" class="location-btn">
+     <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+          <use href="#icon-search">
+        </use></svg>
+   </button>
+</form>
+<div class="get-current-location">
+    <div id="get-location-btn">Use My Location</div>
+</div>
+<div id="store-results"></div>
+</div>
+<div class= "layout container map-new-theme cs_map_container" id="map" style="height: 500px; width: 100%;" > 
+<!-- <gmp-map
+      center="51.4536968,-0.9707661"
+      zoom="8"
+      map-id="map"
+    >
+      <gmp-advanced-marker
+        position="51.4536968,-0.9707661"
+      ></gmp-advanced-marker>
+    </gmp-map> -->
+</div> 
+
+</div>
+
+

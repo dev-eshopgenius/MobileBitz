@@ -1,0 +1,582 @@
+<div class="make-appointment-wrapper {{ section.settings.classname }}">
+  <div class="progress--bar-wrapper page-width">
+    <div class="progress-bar-wrapper">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+  <div class="make-appointent__content-wrap page-width">
+    <div class="first-level-block  question-answers-groups device-brand__name-wrap ">
+      {% if section.settings.firstheading != blank or section.settings.subheading != blank %}
+        <div class="heading-wrapper title-wrapper title-wrapper--no-top-margin">
+          {% if section.settings.firstheading != blank %}
+            <div class="heading">
+              {{ section.settings.firstheading }}
+            </div>
+          {% endif %}
+          {% if section.settings.subheading != blank %}
+            <div class="subheading">
+              {{ section.settings.subheading }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="section-block-wrapp">
+        {% for block in section.blocks %}
+          {% if block.type == 'first_level' %}
+            {% for i in (1..10) %}
+              {% capture image %}image{{ i }}{% endcapture %}
+              {% capture text %}text{{ i }}{% endcapture %}
+              {% capture triggerlink %}triggerlink{{ i }}{% endcapture %}
+              {% if block.settings[image] != blank or block.settings[text] != blank %}
+                <div class="brand-content-container">
+                  <label class="custom-checkbox-container js-brand-selector">
+                    {% if block.settings[image] != blank %}
+                      {{
+                        block.settings[image]
+                        | image_url: width: '500'
+                        | image_tag: loading: 'lazy', class: 'blockimg'
+                      }}
+                    {% endif %}
+                    <input
+                      type="radio"
+                      class="radio-input"
+                      value="{{ block.settings[text] }}"
+                      data-value="{{ block.settings[text] | downcase }}"
+                      name="brandInput"
+                      data-url="{{ block.settings[triggerlink] }}"
+                    >
+                    <div class="text">{{ block.settings[text] }}</div>
+                  </label>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="second-level-block  question-answers-groups device-manufacturer__name-wrap">
+      {% if section.settings.secheading != blank or section.settings.sec_subheading != blank %}
+        <div class="heading-wrapper title-wrapper title-wrapper--no-top-margin">
+          {% if section.settings.secheading != blank %}
+            <div class="heading secheading">
+             <h2>{{ section.settings.secheading }}</h2> 
+            </div>
+          {% endif %}
+          {% if section.settings.sec_subheading != blank %}
+            <div class="subheading sec_subheading">
+              {{ section.settings.sec_subheading }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="section-block-wrapp">
+        {% for block in section.blocks %}
+          {% if block.type == 'second_level' %}
+            {% for i in (1..10) %}
+              {% capture manufac_text %}manufactext{{ i }}{% endcapture %}
+
+              {% if block.settings[manufac_text] != blank %}
+                <div class="manufacture-content-container">
+                  <label class="custom-checkbox-container">
+                    <input
+                      type="checkbox"
+                      class="checkbox-input"
+                      value="{{ block.settings[manufac_text] }}"
+                      name="manufacture_text{{ forloop.index }}"
+                    >
+                    <div class="manufac_text">{{ block.settings[manufac_text] }}</div>
+                  </label>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="third-level-block question-answers-groups iphone-devices__name-wrap">
+      {% if section.settings.third_heading != blank %}
+        <div class="third_heading heading">
+         <h2>{{ section.settings.third_heading }}</h2> 
+        </div>
+      {% endif %}
+      <div class="section-block-wrapp">
+        {% for block in section.blocks %}
+          {% if block.type == 'third_level' %}
+            {% for i in (1..5) %}
+              {% capture image %}image{{ i }}{% endcapture %}
+              {% capture text %}text{{ i }}{% endcapture %}
+              {% capture triggerlink %}triggerlink{{ i }}{% endcapture %}
+              {% if block.settings[image] != blank or block.settings[text] != blank %}
+                <div class="iphoneDevice-content-container">
+                  <label class="custom-checkbox-container">
+                    {% if block.settings[image] != blank %}
+                      {{
+                        block.settings[image]
+                        | image_url: width: '500'
+                        | image_tag: loading: 'lazy', class: 'blockimg'
+                      }}
+                    {% endif %}
+                    <input
+                      type="radio"
+                      class="radio-input"
+                      value="{{ block.settings[text] }}"
+                      name="iphoneDeviceInput"
+                      data-url="{{ block.settings[triggerlink] }}"
+                    >
+                    <div class="text">{{ block.settings[text] }}</div>
+                  </label>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if section.settings.backlabel != blank or section.settings.nextlabel != blank %}
+      <div class="button--wrapper">
+        {% if section.settings.backlabel != blank %}
+          <div class="backlevel back-btn button">
+            {{ section.settings.backlabel }}
+          </div>
+        {% endif %}
+        {% if section.settings.nextlabel != blank %}
+          <div class="nextlevel next-btn button first-level-active">
+            <a href="" class="nextpagelink">
+              {{ section.settings.nextlabel }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Make Appointment",
+  "settings": [
+    {
+      "type": "text",
+      "id": "classname",
+      "label": "ClassName"
+    },
+    {
+      "type": "header",
+      "content": "First Level....."
+    },
+     {
+      "type": "richtext",
+      "id": "firstheading",
+      "label": "Heading"
+    },
+     {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-Heading"
+    },
+    {
+      "type": "header",
+      "content": "Second Level....."
+    },
+     {
+      "type": "text",
+      "id": "secheading",
+      "label": "Heading",
+       "default":"What is wrong with your device?"
+    },
+     {
+      "type": "text",
+      "id": "sec_subheading",
+      "label": "Sub-Heading",
+       "default":"Select multiple options if more than one applies."
+    },
+     {
+      "type": "header",
+      "content": "Third Level....."
+    },
+     {
+      "type": "text",
+      "id": "third_heading",
+      "label": "Heading",
+       "default":"And what type of device are you looking for help with?"
+    },
+    {
+      "type": "text",
+      "id": "nextlabel",
+      "label": "Next Button Label",
+      "default":"Next"
+    },
+     {
+      "type": "text",
+      "id": "backlabel",
+      "label": "Back Button Label",
+      "default":"Back"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "first_level",
+      "limit": 1,
+      "name":"Add First Level",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Content[1]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Device Image[1]"
+        },
+         {
+          "type": "text",
+          "id": "text1",
+          "label": "Device Name[1]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink1",
+          "label": "Trigger Link [1]"
+        },
+        {
+          "type": "header",
+          "content": "Content[2]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Device Image[2]"
+        },
+         {
+          "type": "text",
+          "id": "text2",
+          "label": "Device Name[2]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink2",
+          "label": "Trigger Link [2]"
+        },
+          {
+          "type": "header",
+          "content": "Content[3]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Device Image[3]"
+        },
+         {
+          "type": "text",
+          "id": "text3",
+          "label": "Device Name[3]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink3",
+          "label": "Trigger Link [3]"
+        },
+          {
+          "type": "header",
+          "content": "Content[4]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Device Image[4]"
+        },
+         {
+          "type": "text",
+          "id": "text4",
+          "label": "Device Name[4]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink4",
+          "label": "Trigger Link [4]"
+        },
+          {
+          "type": "header",
+          "content": "Content[5]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Device Image[5]"
+        },
+         {
+          "type": "text",
+          "id": "text5",
+          "label": "Device Name[5]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink5",
+          "label": "Trigger Link [5]"
+        },
+          {
+          "type": "header",
+          "content": "Content[6]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Device Image[6]"
+        },
+         {
+          "type": "text",
+          "id": "text6",
+          "label": "Device Name[6]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink6",
+          "label": "Trigger Link [6]"
+        },
+          {
+          "type": "header",
+          "content": "Content[7]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image7",
+          "label": "Device Image[7]"
+        },
+         {
+          "type": "text",
+          "id": "text7",
+          "label": "Device Name[7]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink7",
+          "label": "Trigger Link [7]"
+        },
+         {
+          "type": "header",
+          "content": "Content[8]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image8",
+          "label": "Device Image[8]"
+        },
+         {
+          "type": "text",
+          "id": "text8",
+          "label": "Device Name[8]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink8",
+          "label": "Trigger Link [8]"
+        },
+        {
+          "type": "header",
+          "content": "Content[9]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image9",
+          "label": "Device Image[9]"
+        },
+         {
+          "type": "text",
+          "id": "text9",
+          "label": "Device Name[9]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink9",
+          "label": "Trigger Link [9]"
+        },
+           {
+          "type": "header",
+          "content": "Content[10]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image10",
+          "label": "Device Image[10]"
+        },
+         {
+          "type": "text",
+          "id": "text10",
+          "label": "Device Name[10]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink10",
+          "label": "Trigger Link [10]"
+        }
+      ]
+    },
+    {
+      "type": "second_level",
+      "limit": 1,
+      "name":"Add Second Level",
+      "settings": [
+       {
+          "type": "text",
+          "id": "manufactext1",
+          "label": "Manufacturer Text [1]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext2",
+          "label": "Manufacturer Text [2]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext3",
+          "label": "Manufacturer Text [3]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext4",
+          "label": "Manufacturer Text [4]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext5",
+          "label": "Manufacturer Text [5]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext6",
+          "label": "Manufacturer Text [6]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext7",
+          "label": "Manufacturer Text [7]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext8",
+          "label": "Manufacturer Text [8]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext9",
+          "label": "Manufacturer Text [9]"
+        },
+        {
+          "type": "text",
+          "id": "manufactext10",
+          "label": "Manufacturer Text [10]"
+        }
+      ]
+    },
+    {
+      "type": "third_level",
+      "name":"Add Third Level",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Third Level Only For iPhone......"
+        },
+         {
+          "type": "header",
+          "content": "Content[1]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Device Image[1]"
+        },
+         {
+          "type": "text",
+          "id": "text1",
+          "label": "Device Name[1]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink1",
+          "label": "Trigger Link [1]"
+        },
+        {
+          "type": "header",
+          "content": "Content[2]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Device Image[2]"
+        },
+         {
+          "type": "text",
+          "id": "text2",
+          "label": "Device Name[2]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink2",
+          "label": "Trigger Link [2]"
+        },
+          {
+          "type": "header",
+          "content": "Content[3]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Device Image[3]"
+        },
+         {
+          "type": "text",
+          "id": "text3",
+          "label": "Device Name[3]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink3",
+          "label": "Trigger Link [3]"
+        },
+          {
+          "type": "header",
+          "content": "Content[4]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Device Image[4]"
+        },
+         {
+          "type": "text",
+          "id": "text4",
+          "label": "Device Name[4]"
+        },
+        {
+          "type": "url",
+          "id": "triggerlink4",
+          "label": "Trigger Link [4]"
+        },
+          {
+          "type": "header",
+          "content": "Content[5]"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Device Image[5]"
+        },
+         {
+          "type": "text",
+          "id": "text5",
+          "label": "Device Name[5]"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Make Appointment"
+    }
+  ]
+}
+{% endschema %}

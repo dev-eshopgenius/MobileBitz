@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "customizer_step_bar_kXtM4g": {
+      "type": "customizer-step-bar",
+      "blocks": {
+        "step_bar_Q6wnUV": {
+          "type": "step_bar",
+          "settings": {
+            "stepbar": "1 Select Device",
+            "mob_stepbar": "1 Device"
+          }
+        },
+        "step_bar_TTTnjk": {
+          "type": "step_bar",
+          "settings": {
+            "stepbar": "2 Select Repair",
+            "mob_stepbar": "1 Device"
+          }
+        },
+        "step_bar_CYtjAn": {
+          "type": "step_bar",
+          "settings": {
+            "stepbar": "3 Select Store",
+            "mob_stepbar": "1 Device"
+          }
+        },
+        "step_bar_AAwVwP": {
+          "type": "step_bar",
+          "settings": {
+            "stepbar": "4 Select Date",
+            "mob_stepbar": "1 Device"
+          }
+        },
+        "step_bar_qztd9M": {
+          "type": "step_bar",
+          "settings": {
+            "stepbar": "5 Book Repair",
+            "mob_stepbar": "1 Device"
+          }
+        }
+      },
+      "block_order": [
+        "step_bar_Q6wnUV",
+        "step_bar_TTTnjk",
+        "step_bar_CYtjAn",
+        "step_bar_AAwVwP",
+        "step_bar_qztd9M"
+      ],
+      "settings": {
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-2"
+      }
+    },
+    "customizer_collection_HkCi4D": {
+      "type": "customizer-collection",
+      "blocks": {
+        "visit_us_popup_cgGGND": {
+          "type": "visit_us_popup",
+          "settings": {
+            "blocktitle": "How do you want us to fix your device?",
+            "visit_title": "Visit Us",
+            "subtitle": "<p>Choose from one of our 38 nationwide locations.<\/p>",
+            "mail_title": "Mail-in",
+            "mail_subtitle": "<p>No stores close to you? Send your device to us!<\/p>",
+            "email_title": "Enter your email to receive a booking confirmation",
+            "btn_label": "Proceed to choose a store",
+            "btn_url": ""
+          }
+        },
+        "mailin_popup_FGmLPy": {
+          "type": "mailin_popup",
+          "settings": {
+            "title": "Mail-in service",
+            "content": "<p>Thank you for selecting our mail-in repair service.<br\/>This is our most widely accessible service and ideal for customers who do not live near one of our service centres.<\/p>",
+            "proc_title": "What's the process?",
+            "proc_img1": "shopify:\/\/shop_images\/mail-in_1.webp",
+            "proc_content1": "<p>We will send you a mail-in pack, within 1-2 business days of receiving your order.<\/p>",
+            "proc_img2": "shopify:\/\/shop_images\/mail-in_2.webp",
+            "proc_content2": "<p>Place the device inside the pack and drop into your local post office.<\/p>",
+            "proc_img3": "shopify:\/\/shop_images\/mail-in_3.webp",
+            "proc_content3": "<p>Once we receive your device, we will diagnose the issue, complete the repair, and mail your device back to you.<\/p>",
+            "time_title": "How long will it take?",
+            "time_content": "Usually, your device will be returned to you <span> within 2-3 business days from the point we receive your device <\/span> at our central service centre.\n\nIn certain circumstances, depending on the nature of the issue and parts availability, your repair may take longer than this. In these circumstances we will contact you so that you remain up to date on how your repair is progressing.",
+            "btn_label": "Continue"
+          }
+        }
+      },
+      "block_order": [
+        "visit_us_popup_cgGGND",
+        "mailin_popup_FGmLPy"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "customizer_step_bar_kXtM4g",
+    "banner",
+    "customizer_collection_HkCi4D"
+  ]
+}

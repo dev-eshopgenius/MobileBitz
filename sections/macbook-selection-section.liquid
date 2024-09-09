@@ -1,0 +1,134 @@
+<div class="macbook-replacement-section rich-section-macbook" id="macbook-selection">
+  <div class="page-width">
+  {% if section.settings.title != blank or section.settings.subtitle != blank %}
+    <div class="heading-wrap">
+      {% if section.settings.title != blank %}
+        <h1 class="title">
+          {{ section.settings.title }}
+        </h1>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <div class="subtitle">
+          {{ section.settings.subtitle }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="section--wrapper">
+    <div class="first-block-wrap">
+      {% for block in section.blocks %}
+        {% if block.type == 'block_first' %}
+          <div class="block--wrapper">
+            {% if block.settings.heading != blank %}
+              <div class="heading">
+                <h2>{{ block.settings.heading }}</h2>
+              </div>
+            {% endif %}
+            {% if block.settings.subheading != blank %}
+              <div class="subheading">
+                <h3>{{ block.settings.subheading }}</h3>
+              </div>
+            {% endif %}
+            {% if block.settings.image != blank %}
+              <div class="image">
+                {{ block.settings.image | image_url: width: 1024 | image_tag: class: 'block-img', loading: 'lazy' }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="second-block-wrap page-width">
+      {% for block in section.blocks %}
+        {% if block.type == 'blcok_second' %}
+          <div class="block--wrapper">
+            {% if block.settings.heading != blank %}
+              <div class="heading faq-heading-wrapp" >
+                <h2>{{ block.settings.heading }}</h2>
+              </div>
+            {% endif %}
+            <div class="faq-content-wrapp" style="display: none;">
+              {% if block.settings.subheading != blank %}
+                <div class="subheading">
+                  <h3>{{ block.settings.subheading }}</h3>
+                </div>
+              {% endif %}
+              {% if block.settings.image != blank %}
+                <div class="image">
+                  {{ block.settings.image | image_url: width: 1024 | image_tag: class: 'block-img', loading: 'lazy' }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "MacBook Selection Section",
+  "settings": [
+    {
+      "type": "text",
+      "id":"title",
+      "label":"Section Heading"
+    },
+    {
+      "type": "text",
+      "id":"subtitle",
+      "label":"Sub-Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block_first",
+      "name":"Battery Replacement",
+      "limit": 1,
+      "settings": [
+        {
+        "type": "text",
+        "id":"heading",
+        "label":"Heading"
+      },
+        {
+        "type": "richtext",
+        "id":"subheading",
+        "label":"Sub-Heading"
+      },
+        {
+          "type": "image_picker",
+          "id":"image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "blcok_second",
+      "name":"Faq",
+      "limit": 1,
+      "settings": [
+        {
+        "type": "text",
+        "id":"heading",
+        "label":"Heading"
+      },
+        {
+        "type": "richtext",
+        "id":"subheading",
+        "label":"Content"
+      },
+        {
+          "type": "image_picker",
+          "id":"image",
+          "label": "Content Image"
+        }
+      ]
+    }
+  ],
+  "presets":[{
+    "name": "MacBook Selection"
+  }]
+}
+{% endschema %}

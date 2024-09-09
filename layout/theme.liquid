@@ -28,9 +28,35 @@
 
     {% render 'meta-tags' %}
 
+<script>
+  function initMap() {
+        var defaultLatLng = { lat: 51.4536968, lng: -0.9707661 };
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: defaultLatLng,
+            zoom: 8
+        });
+          if (userMarker) {
+             userMarker.setMap(null);
+        }
+        userMarker = new google.maps.Marker({
+             position: { lat: 51.4536968, lng: -0.9707661 },
+              map: map,
+              title: "You are here"
+        });
+   }
+</script>    
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh3yoxl4si64IqtbSiabL0WMnImqf7-0U&libraries=maps,marker&v=beta"
+      defer
+    ></script>
+      
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh3yoxl4si64IqtbSiabL0WMnImqf7-0U&callback=initMap"></script>
+
+     <script src="{{ 'jquery.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+     <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -251,6 +277,7 @@
       }
     {% endstyle %}
 
+     {{ 'custom.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
@@ -277,15 +304,14 @@
         onload="this.media='all'"
       >
     {%- endif -%}
-
-    <script>
+   <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="{{ template | replace: '.', '-' | handle }} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -355,5 +381,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  </body>
+
+
+ 
+  </body> 
 </html>

@@ -1,0 +1,259 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "customizer_banner_VFYjbz": {
+      "type": "customizer-banner",
+      "settings": {
+        "classname": "cust-banner-design1",
+        "bg_clr": "#edf5ff",
+        "banner_img": "shopify:\/\/shop_images\/tablet-1688045948553.jpg",
+        "heading": "Express",
+        "subheading": "iPad Repairs",
+        "btn_label": "Select Device",
+        "btn_url": "#customizer-collection-wrapp",
+        "text1": "",
+        "text2": "",
+        "text3": "",
+        "text_link3": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_tbf8Mk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7M7RcA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Find your iPad selecting from the list below or by Model Number",
+            "heading_size": "h1"
+          }
+        },
+        "text_dTPyKb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you noticing your iPad's battery life is draining much quicker than it used to? Do you need a replacement screen? Is your iPad struggling to charge? Or is your home button simply not functioning any more? Do not despair, you're in safe hands with iSmash. Our team of Tech Repair Specialists can have your iPad fixed and back up and running in no time, with many repairs being ready in as little as 120 minutes, thanks to our same day repair service.<\/p><p>Our experts can deal with a wide range of issues and services. From battery replacement and liquid damage to software issues and screen replacements, our experienced technicians will get your iPad up and running in no time.<\/p><p>We have been restoring and replacing Apple products since 2013 and have a team of repair specialists who are able to repair everything from the simplest of iPad repairs to the most complex of issues. High skilled technicians conduct all repairs. Get total piece of mind with a free Lifetime warranty on all battery and screen repairs.<\/p><p>If you are unable to visit an iSmash store, we offer a mail in repair service. Use our post service to have your iPad couriered to us and once repaired, have it returned directly to you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7M7RcA",
+        "text_dTPyKb"
+      ],
+      "settings": {
+        "section_css_class": "rich-section2",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "customizer_collection_section_y8CKiT": {
+      "type": "customizer-featured-collection",
+      "blocks": {
+        "add_collection_Knqeh9": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "rgba(0,0,0,0)",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/image_5.jpg",
+            "coll_name": "iPad Mini",
+            "btnlabel": "Select Device",
+            "collection": "iphone-12-mini"
+          }
+        },
+        "add_collection_FjU6R3": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "rgba(0,0,0,0)",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/image_6.jpg",
+            "coll_name": "iPad",
+            "btnlabel": "Select Device",
+            "collection": "a54"
+          }
+        },
+        "add_collection_bVdifr": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/image_4.jpg",
+            "coll_name": "iPad Air",
+            "btnlabel": "Select Device",
+            "collection": "huawei-p30"
+          }
+        },
+        "add_collection_mgbViF": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/image_6.jpg",
+            "coll_name": "iPad Pro",
+            "btnlabel": "Select Device",
+            "collection": "iphone-11-pro"
+          }
+        }
+      },
+      "block_order": [
+        "add_collection_Knqeh9",
+        "add_collection_FjU6R3",
+        "add_collection_bVdifr",
+        "add_collection_mgbViF"
+      ],
+      "settings": {
+        "classname": "cust-collection-design1",
+        "bg_clr": "",
+        "secheading": ""
+      }
+    },
+    "customizer_icon_text_D7WTji": {
+      "type": "customizer-icon-text",
+      "blocks": {
+        "icon_text_Uzpr3T": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "Price",
+            "toolheading": "Promise ",
+            "toolcontent": "Use our free Lorem Ipsum Generator if you are looking for copyright free dummy content for your websites, mockups, wireframes and articles."
+          }
+        },
+        "icon_text_QGBWVH": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "Express",
+            "toolheading": "Repairs ",
+            "toolcontent": "Use our free Lorem Ipsum Generator if you are looking for copyright free dummy content for your websites, mockups, wireframes and articles."
+          }
+        },
+        "icon_text_MimxB6": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "Lifetime",
+            "toolheading": "Warranty*",
+            "toolcontent": "Use our free Lorem Ipsum Generator if you are looking for copyright free dummy content for your websites, mockups, wireframes and articles."
+          }
+        },
+        "icon_text_dFDJXm": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "Manufacturer",
+            "toolheading": "Service Repair ",
+            "toolcontent": "Use our free Lorem Ipsum Generator if you are looking for copyright free dummy content for your websites, mockups, wireframes and articles."
+          }
+        },
+        "icon_text_ri93CM": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "500k",
+            "toolheading": "HappyCustomers ",
+            "toolcontent": "Use our free Lorem Ipsum Generator if you are looking for copyright free dummy content for your websites, mockups, wireframes and articles."
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_Uzpr3T",
+        "icon_text_QGBWVH",
+        "icon_text_MimxB6",
+        "icon_text_dFDJXm",
+        "icon_text_ri93CM"
+      ],
+      "settings": {
+        "classname": "custom-icon-text",
+        "bg_clr": "#ffffff",
+        "secheading": "Five Reasons to Choose mobilebitz"
+      }
+    },
+    "collapsible_content_Wmeekf": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_mdWfka": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is the nearest mobilebitz store to repair my iPad?",
+            "icon": "none",
+            "open_collapsible_row": false,
+            "row_content": "<p>All our mobilebitz store's repair iPads, whether its screen or water damage our expert technicians will get your iPad fixed in no time! Use our<strong> <\/strong><a href=\"https:\/\/www.ismash.com\/pages\/locations\"><strong>store locator <\/strong><\/a>to find your nearest mobilebitz store and visit us today.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ANeEek": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I book a same day appointment to fix my iPad?",
+            "icon": "none",
+            "open_collapsible_row": false,
+            "row_content": "<p>Our repair times vary for iPad repairs depending on the type of repair and the type of iPad you have, it can take from 120 minutes to 48 hours. Our in-store experts will advise you on how long it will take to repair your iPad.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ULBfNi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do mobilebitz offer iPad screen replacement?",
+            "icon": "none",
+            "open_collapsible_row": false,
+            "row_content": "<p>mobilebitz offer a wide variety of replacement and repairs services for iPads including iPad screen replacement. If you have a cracked iPad screen or if it has suffered other damages bring it into an iSmash store today so that our tech repair specialists can take a look and have your fully repaired device handed back to you in the very same day.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7atrHE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How much does it cost to replace an iPad screen?",
+            "icon": "none",
+            "open_collapsible_row": false,
+            "row_content": "<p>Depending on the model of your iPad, screen replacement can cost anywhere from £39 to £399. Screen damage and broken screens should always be fixed immediately to prevent further damage. <\/p><p>Select your Device above to get specific pricing.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_mdWfka",
+        "collapsible_row_ANeEek",
+        "collapsible_row_ULBfNi",
+        "collapsible_row_7atrHE"
+      ],
+      "settings": {
+        "classname": "customizer--faq-section",
+        "bgcolor": "",
+        "caption": "",
+        "heading": "FAQs About the iPad Repairs",
+        "subheading": "Here are some of the most common questions we get asked around iPad Repairs - select your issue and see what we can do for you.",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customizer_banner_VFYjbz",
+    "rich_text_tbf8Mk",
+    "customizer_collection_section_y8CKiT",
+    "customizer_icon_text_D7WTji",
+    "collapsible_content_Wmeekf"
+  ]
+}

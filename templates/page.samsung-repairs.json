@@ -1,0 +1,189 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "customizer_banner_8VA7kX": {
+      "type": "customizer-banner",
+      "settings": {
+        "classname": "cust-banner-design2",
+        "bg_clr": "#edf5ff",
+        "banner_img": "shopify:\/\/shop_images\/samsung-v1644579852011.webp",
+        "heading": "Express Repairs",
+        "iconimg": "shopify:\/\/shop_images\/samsung-partnership-logo-_1_-v1659439116743.webp",
+        "subheading": "",
+        "btn_label": "Select your Device",
+        "btn_url": "#customizer-collection-wrapp",
+        "text1": "",
+        "text2": "",
+        "text3": "",
+        "text_link3": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "customizer_image_with_text_RLA7zm": {
+      "type": "customizer-image-with-text",
+      "blocks": {
+        "add_content_WURQcX": {
+          "type": "add_content",
+          "settings": {
+            "heading": "Manufacturer Accredited Technicians",
+            "content": "At iSmash, we have always been dedicated to delivering professional high-quality repairs with an express turnaround, meaning that you are never left for too long without your device. Our technicians are fully qualified and expertly trained to the highest standards by Samsung to ensure that your Samsung smartphone is in the best hands possible. Visit one of our 35 Samsung Authorised Service Centres to have your device expertly repaired today."
+          }
+        },
+        "add_content_dX7p6Y": {
+          "type": "add_content",
+          "settings": {
+            "heading": "Genuine Samsung Parts",
+            "content": "As a Samsung Authorised Service Partner, we only use genuine parts sourced directly from Samsung to repair your device. All our expert technicians are fully qualified and trained by Samsung to the highest standard to enable them to repair your Samsung smartphone."
+          }
+        },
+        "add_icon_PGBBJ3": {
+          "type": "add_icon",
+          "settings": {
+            "icon1": "shopify:\/\/shop_images\/1_27ede553-42fe-4875-8b58-992f916b63e3.webp",
+            "text1": "Qualified Engineers",
+            "icon2": "shopify:\/\/shop_images\/2_d1946ae3-702d-42bb-a5ff-7d7956d13b4f.webp",
+            "text2": "Genuine Parts",
+            "icon3": "shopify:\/\/shop_images\/3_09210787-c963-4571-84f6-896b36238234.webp",
+            "text3": "Backed by Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "add_content_WURQcX",
+        "add_content_dX7p6Y",
+        "add_icon_PGBBJ3"
+      ],
+      "settings": {
+        "classname": "cust-iwt-design2",
+        "bg_clr": "#f4f4f4",
+        "secheading": "Samsung Authorised Service Partner",
+        "banner_img": "shopify:\/\/shop_images\/people-image-samsung_-v1659366420517.webp"
+      }
+    },
+    "customizer_collection_section_D3mCEk": {
+      "type": "customizer-featured-collection",
+      "blocks": {
+        "add_collection_L7XHYL": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "#edf5ff",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/S21FE.webp",
+            "coll_name": "Galaxy S series",
+            "btnlabel": "Select Device",
+            "collection": "galaxy-s-series-1"
+          }
+        },
+        "add_collection_mnrmqL": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "#edf5ff",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/Note10.webp",
+            "coll_name": "Galaxy Note Series",
+            "btnlabel": "Select Device",
+            "collection": "samsung-note"
+          }
+        },
+        "add_collection_EGEd7F": {
+          "type": "add_collection",
+          "settings": {
+            "blockbg_clr": "#edf5ff",
+            "slider_enable": false,
+            "icon_img": "shopify:\/\/shop_images\/A72.webp",
+            "coll_name": "Galaxy A series",
+            "btnlabel": "Select Device",
+            "collection": "galaxy-s-series"
+          }
+        }
+      },
+      "block_order": [
+        "add_collection_L7XHYL",
+        "add_collection_mnrmqL",
+        "add_collection_EGEd7F"
+      ],
+      "settings": {
+        "classname": "cust-collection-design2",
+        "bg_clr": "#ffffff",
+        "secheading": "Select your Samsung"
+      }
+    },
+    "customizer_icon_text_XQMnNH": {
+      "type": "customizer-icon-text",
+      "blocks": {
+        "icon_text_93R3Ln": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/1.png",
+            "heading": "Price",
+            "toolheading": "Promise ",
+            "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
+          }
+        },
+        "icon_text_H4GRKi": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/2_2.png",
+            "heading": "Express",
+            "toolheading": "Repairs ",
+            "toolcontent": " It may be used to display a sample of fonts, generate text for testing, or to spoof an e-mail spam filter."
+          }
+        },
+        "icon_text_NttrTr": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/3_1.png",
+            "heading": "Lifetime",
+            "toolheading": "",
+            "toolcontent": ""
+          }
+        },
+        "icon_text_9EGXED": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/4_1.png",
+            "heading": "Manufacturer",
+            "toolheading": "",
+            "toolcontent": ""
+          }
+        },
+        "icon_text_C9YHBb": {
+          "type": "icon_text",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/5_1.png",
+            "heading": "500k Happy",
+            "toolheading": "",
+            "toolcontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_93R3Ln",
+        "icon_text_H4GRKi",
+        "icon_text_NttrTr",
+        "icon_text_9EGXED",
+        "icon_text_C9YHBb"
+      ],
+      "settings": {
+        "classname": "cust-icon-design2",
+        "bg_clr": "#ffffff",
+        "secheading": "Five Reasons to Choose Mobilebitz"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "customizer_banner_8VA7kX",
+    "customizer_image_with_text_RLA7zm",
+    "customizer_collection_section_D3mCEk",
+    "customizer_icon_text_XQMnNH"
+  ]
+}

@@ -1,0 +1,222 @@
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="section-{{ section.id }}-padding customizer--banner-section {{ section.settings.classname }}"
+  style="background:{{ section.settings.bg_clr }}"
+>
+  <div class="customizer--banner-wrapper">
+    <div class="banner-content-wrapper">
+      {% if section.settings.heading != blank
+        or section.settings.subheading != blank
+        or section.settings.btn_label != blank
+      %}
+        <div class="content-wrapper">
+          {% if section.settings.heading != blank %}
+            <div class="heading">
+              {{ section.settings.heading }}
+            </div>
+          {% endif %}
+          {% if section.settings.iconimg != blank %}
+            <div class="iconimg">
+              {{ section.settings.iconimg | image_url: width: 100 | image_tag: loading: 'lazy', class: 'icon-img' }}
+            </div>
+          {% endif %}
+          {% if section.settings.subheading != blank %}
+            <div class="subheading">
+             <h2> {{ section.settings.subheading }}</h2>
+            </div>
+          {% endif %}
+          {% if section.settings.btn_label != blank or section.settings.icon != blank %}
+            <div class="button-wrapper">
+              {% if section.settings.btn_label != blank %}
+                <div class="button btn_label selected-element" data-target="{{ section.settings.btn_url }}">
+                 {{ section.settings.btn_label }}
+                </div>
+              {% endif %}
+              {% if section.settings.icon != blank %}
+                <div class="icon">
+                  {{ section.settings.icon | image_url: width: 50 | image_tag: loading: 'lazy', class: 'icon' }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if section.settings.banner_img != blank %}
+        <div class="image-content-wrapp">
+          {{ section.settings.banner_img | image_url: width: 1024 | image_tag: loading: 'lazy', class: 'banner_img' }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% comment %}
+<div class="below-banner-content">
+  <div class="content--wrapper">
+    <ul>
+      <li class="first-content">
+        {% if section.settings.imagefirst != blank %}
+          {{ section.settings.imagefirst | image_url: width: 50px | image_tag: loading:'lazy', class:'image1' }}
+        {% endif %}
+        {% if section.settings.text1 != blank %}
+          <p class="text1">{{ section.settings.text1 }}</p>
+        {% endif %}
+      </li>
+      <li class="second-content">
+        {% if section.settings.image2 != blank %}
+          {{ section.settings.image2 | image_url: width:50px | image_tag: loading:'lazy', class:'image1' }}
+        {% endif %}
+        {% if section.settings.text2 != blank %}
+          <p class="text1">{{ section.settings.text2 }}</p>
+        {% endif %}
+      </li>
+      <li class="first-content">
+        {% if section.settings.text3 != blank %}
+          <p class="text1">
+            <a href="{{ section.settings.text_link3 }}">
+              {{ section.settings.text3 }}
+            </a>
+          </p>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+</div>
+{% endcomment %}
+{% schema %}
+{
+  "name": "Customizer Banner",
+  "settings": [
+       {
+  "type": "select",
+  "id": "classname",
+  "label": "Unique ClassName",
+  "options": [
+    {
+      "value": "cust-banner-design1",
+      "label": "Design 1"
+    },
+    {
+      "value": "cust-banner-design2",
+      "label": "Design 2"
+    },
+    {
+      "value": "cust-banner-design3",
+      "label": "Design 3"
+    }
+  ]
+},
+    
+    {
+      "type": "color",
+      "id": "bg_clr",
+      "label": "Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_img",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id":"heading",
+      "label": "Heading"
+    },
+     {
+      "type": "image_picker",
+      "id": "iconimg",
+      "label": "Icon Image"
+    },
+     {
+      "type": "html",
+      "id":"subheading",
+      "label": "Sub-Heading"
+    },
+    {
+      "type": "text",
+      "id":"btn_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "text",
+      "id":"btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type":"image_picker",
+      "id": "icon",
+      "label": "Icon"
+    },
+    {
+      "type": "header",
+      "content": "Below Banner Label Content....."
+    },
+    {
+      "type": "image_picker",
+      "id": "imagefirst",
+      "label": "Icon [1]"
+    },
+     {
+      "type": "text",
+      "id": "text1",
+      "label": "Text [1]"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Icon [2]"
+    },
+     {
+      "type": "text",
+      "id": "text2",
+      "label": "Text [2]"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Text [3]"
+    },
+    {
+      "type": "url",
+      "id": "text_link3",
+      "label": "Text[3] Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [{
+    "name": "Customizer Banner"
+  }]
+}
+{% endschema %}

@@ -1,0 +1,324 @@
+<div class="customizer-collection-section">
+  <div class="customizer-collection-wrapper page-width">
+    <div class="customizer-tab-wrapper tabs">
+      {% if collection.metafields.custom.tabs_with_product_content.value != blank %}
+        <div class="tab--wrapper tab-links">
+          {% if collection.metafields.custom.tabs_with_product_content.value != blank %}
+            {% for tab_parent in collection.metafields.custom.tabs_with_product_content.value %}
+              {% if tab_parent.tab_title != blank %}
+                <div
+                  class="tab-heading {% if forloop.first %}active{% endif %}"
+                  data-target="#{{ tab_parent.tab_title | handle  }}"
+                >
+                  <div class="tab-title-wrapp">
+                    {% if tab_parent.tab_image != blank %}
+                      {{
+                        tab_parent.tab_image
+                        | image_url: width: 100
+                        | image_tag: loading: 'lazy', class: 'tab_image'
+                      }}
+                    {% endif %}
+                    <div class="title">{{ tab_parent.tab_title }}</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="tab-content">
+        {% for tab_parent in collection.metafields.custom.tabs_with_product_content.value %}
+          <div
+            id="{{ tab_parent.tab_title | handle }}"
+            class="tab {% if forloop.first %}active{% endif %} content--wrapper"
+          >
+            {% for tab_data in tab_parent.tab_data.value %}
+              <div
+                class="tab-allcontent-wrapp"
+              >
+                {% if tab_data.save_content.value != blank %}
+                  <div class="save-content-wrapp">
+                    <div class="save-wrap">
+                      {{ tab_data.save_content.value }}
+                    </div>
+                  </div>
+                {% endif %}
+                <div class="tab-content-wrapper">
+                  <div class="main-tab-wrapp">
+                    {% if tab_data.product.value != blank %}
+                      <div class="product--wrapper">
+                        <div class="product-image" prod-image="{{ tab_data.product_image | image_url }}">
+                          {{
+                            tab_data.product_image
+                            | image_url: width: tab_data.product_image.width
+                            | image_tag: loading: 'lazy', class: 'product_image'
+                          }}
+                        </div>
+                        <div
+                          class="product-title"
+                          prod-id="{{ tab_data.product.value.selected_or_first_available_variant.id }}"
+                          prod-title="{{ tab_data.product.value.title }}"
+                        >
+                          <h2>{{ tab_data.product.value.title }}</h2>
+                        </div>
+                        <div
+                          class="product-compare-price"
+                          prod-comp-price=" {{ tab_data.product.value.compare_at_price | money  }}"
+                        >
+                          {{ tab_data.product.value.compare_at_price | money }}
+                        </div>
+                        <div
+                          class="product-price"
+                          prod-price="{{ tab_data.product.value.price | money_without_currency }}"
+                        >
+                          {{ tab_data.product.value.price | money }}
+                        </div>
+                        {% unless tab_data.product.value.variants.size == 1
+                          and tab_data.product.value.variants.first.title == 'Default Title'
+                        %}
+                          <div class="pro-variant-wrapp">
+                            <select>
+                              {% for product_vari in tab_data.product.value.variants %}
+                                <option data-id="{{ product_vari.id }}">{{ product_vari.title }}</option>
+                              {% endfor %}
+                            </select>
+                          </div>
+                        {% endunless %}
+
+                        {% if tab_data.button_label.value != blank %}
+                          <div class="pro-button-wrap button" id="ProductSubmitButton-{{ section.id }}">
+                            <input
+                              type="hidden"
+                              name="id"
+                              value="{{ tab_data.product.value.selected_or_first_available_variant.id }}"
+                              class="product-variant-id"
+                            >
+                            <a href="{{ tab_data.button_url.value }}">
+                              {{ tab_data.button_label.value }}
+                            </a>
+                          </div>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    {% if tab_data.product.value.metafields.custom.diagnostic_description != blank
+                      or tab_data.product.value.metafields.custom.repair_description_content != blank
+                      or tab_data.product.value.metafields.custom.warranty_lifetime_content != blank
+                      or tab_data.product.value.metafields.custom.data_guarantee_content != blank
+                      or tab_data.product.value.metafields.custom.repair_time_content != blank
+                    %}
+                      <div class="product-details-wrapper">
+                        <div class="dtails-content-wrapp">
+                          {% if tab_data.product.value.metafields.custom.diagnostic_description != blank %}
+                            <div class="slide-content diagnostic-description">
+                              <div class="heading"><h3>Diagnostic description:</h3></div>
+                              <div class="content active">
+                                {{ tab_data.product.value.metafields.custom.diagnostic_description }}
+                              </div>
+                            </div>
+                          {% endif %}
+                          {% if tab_data.product.value.metafields.custom.repair_description_content != blank %}
+                            <div class="slide-content repair-description active">
+                              <div class="heading"><h3>Repair description</h3></div>
+                              <div class="content active">
+                                {{ tab_data.product.value.metafields.custom.repair_description_content }}
+                              </div>
+                            </div>
+                          {% endif %}
+                          {% if tab_data.product.value.metafields.custom.warranty_lifetime_content != blank %}
+                            <div class="slide-content warranty-description">
+                              <div class="heading">
+                                <h3>Warranty</h3>
+                              </div>
+                              <div class="content" style="display:none;">
+                                {{ tab_data.product.value.metafields.custom.warranty_lifetime_content | metafield_tag }}
+                              </div>
+                            </div>
+                          {% endif %}
+                          {% if tab_data.product.value.metafields.custom.data_guarantee_content != blank %}
+                            <div class="slide-content guarantee-description">
+                              <div class="heading"><h3>Data Guarantee</h3></div>
+                              <div class="content" style="display:none;">
+                                {{ tab_data.product.value.metafields.custom.data_guarantee_content }}
+                              </div>
+                            </div>
+                          {% endif %}
+                          {% if tab_data.product.value.metafields.custom.repair_time_content != blank %}
+                            <div class="slide-content repairTime-description active">
+                              <div class="heading">
+                                <h3>Repair time</h3>
+                              </div>
+                              <div class="content active">
+                                {{ tab_data.product.value.metafields.custom.repair_time_content | metafield_tag }}
+                              </div>
+                            </div>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if tab_data.side_image.value != blank %}
+                      <div class="side-image-wrapper">
+                        <div class="image">
+                          {{
+                            tab_data.side_image.value
+                            | image_url: width: tab_data.side_image.value.width
+                            | image_tag: loading: 'lazy', class: 'side-img'
+                          }}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% render 'visit-popup' %}
+
+{% schema %}
+{
+  "name": "Collection for Customizer",
+  "settings": [
+
+  ],
+  "blocks": [
+    {
+      "type": "visit_us_popup",
+      "name":"Visit Us Popup",
+      "limit": 1,
+      "settings": [
+         {
+          "type": "text",
+          "id": "blocktitle",
+          "label": "Block Title",
+          "default":"How do you want us to fix your device?"
+        },
+        {
+          "type": "text",
+          "id": "visit_title",
+          "label": "Title",
+          "default":"Visit Us"
+        },
+        {
+          "type": "richtext",
+          "id": "subtitle",
+          "label": "Visit Content"
+        },
+         {
+          "type": "text",
+          "id": "mail_title",
+          "label": "Mail Title",
+          "default":"Mail-in"
+        },
+        {
+          "type": "richtext",
+          "id": "mail_subtitle",
+          "label": "Mail Content"
+        },
+        {
+          "type": "text",
+          "id": "email_title",
+          "label": "Email Title",
+          "default":"Enter your email to receive a booking confirmation"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button Label"
+        },
+         {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button URL"
+        }
+      ]
+    },
+    {
+      "type": "mailin_popup",
+      "name":"Mail-in Popup",
+      "limit": 1,
+      "settings": [
+         {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default":"Mail-in service"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Booking Process Block..."
+        },
+         {
+          "type": "text",
+          "id": "proc_title",
+          "label": "Title",
+          "default":"What's the process?"
+        },
+         {
+          "type": "image_picker",
+          "id": "proc_img1",
+          "label": "Image [1]"
+        },
+        {
+          "type": "richtext",
+          "id": "proc_content1",
+          "label": "Content [1]"
+        },
+        {
+          "type": "image_picker",
+          "id": "proc_img2",
+          "label": "Image [2]"
+        },
+        {
+          "type": "richtext",
+          "id": "proc_content2",
+          "label": "Content [2]"
+        },
+        {
+          "type": "image_picker",
+          "id": "proc_img3",
+          "label": "Image [3]"
+        },
+        {
+          "type": "richtext",
+          "id": "proc_content3",
+          "label": "Content [3]"
+        },
+        {
+          "type": "header",
+          "content": "Booking Time Block...."
+        },
+        {
+          "type": "text",
+          "id": "time_title",
+          "label": "Title",
+          "default": "How long will it take?"
+        },
+         {
+          "type": "html",
+          "id": "time_content",
+          "label": "Content"
+        },
+         {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Button Label",
+           "default":"Continue"
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Customizer Collection"
+  }]
+}
+{% endschema %}
